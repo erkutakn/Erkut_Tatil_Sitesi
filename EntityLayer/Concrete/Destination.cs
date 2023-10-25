@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Security.AccessControl;
 using System.Security.Cryptography.X509Certificates;
 
@@ -6,7 +7,8 @@ namespace EntityLayer.Concrete
 {
 	public class Destination
 	{
-		public int DestinationID  { get; set; }
+        [Key]
+        public int DestinationID  { get; set; }
 
 		public string City { get; set; }
 

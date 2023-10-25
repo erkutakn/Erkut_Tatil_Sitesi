@@ -1,9 +1,12 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace EntityLayer.Concrete
 {
 	public class About2
 	{
-		public int About2ID { get; set; }
+        [Key]
+        public int About2ID { get; set; }
         public string Title1 { get; set; }
         public string Title2 { get; set; }
 
