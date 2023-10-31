@@ -8,7 +8,7 @@ namespace DataAccessLayer.Concrete
 	{
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-					optionsBuilder.UseSqlServer("server=localhost;database=AkınHotelDB;integrated security=true;");
+			optionsBuilder.UseSqlServer("server=localhost;database=AkınHotelDB;integrated security=true;");
 		}
 
 		public DbSet<About> Abouts { get; set; }
