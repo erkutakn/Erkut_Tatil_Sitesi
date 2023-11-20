@@ -21,6 +21,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<Newsletter> Newsletters { get; set; }
         public DbSet<SubAbout> SubAbouts { get; set; }
         public DbSet<TestiMonial> TestiMonials { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
 
 
