@@ -8,7 +8,7 @@ namespace DataAccessLayer.Concrete
 	{
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("server=DESKTOP-B6GQ8PR\\MSSQLSERVER01;database=AkınHotelDB;integrated security=true;TrustServerCertificate=true");
+			optionsBuilder.UseSqlServer("server=LAPTOP-28OTKVMO\\MSSQLSERVER01;database=AkınHotelDB;integrated security=true;TrustServerCertificate=true");
 		}
 
 		public DbSet<About> Abouts { get; set; }
