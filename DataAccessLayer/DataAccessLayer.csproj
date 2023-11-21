@@ -30,8 +30,6 @@
   <ItemGroup>
     <Folder Include="Concrete\" />
     <Folder Include="Repository\" />
-    <Folder Include="Abstract\" />
-    <Folder Include="EntityFramework\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
