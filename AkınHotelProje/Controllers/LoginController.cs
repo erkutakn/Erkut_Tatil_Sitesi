@@ -31,11 +31,9 @@ namespace AkınTurizmProje.Controllers
                 Name = p.Name,
                 Surname = p.Surname,
                 Email = p.Mail,
-                UserName = p.Username,
-                Password=p.Password
-                
+                UserName = p.Username
             };
-            if (p.Password==p.ConfirmPassword)
+            if (p.Password == p.ConfirmPassword)
             {
 				var result = await _userManager.CreateAsync(appUser, p.Password);
 

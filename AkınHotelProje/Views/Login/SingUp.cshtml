@@ -78,14 +78,17 @@ Author URL: http://w3layouts.com
 						</div>
 						<div class="form-input">
 							<label>Şifreyi Giriniz</label>
-							<input type="password" name="" asp-for="Password" required/>
+							<input type="password"  asp-for="Password" required />
 							<span asp-validation-for="Password" class="text-danger" ></span>
 						</div>
 						<div class="form-input">
 							<label>Şifreyi Tekrarlayınız</label>
-							<input type="password" name="" asp-for="ConfirmPassword" required/>
+							<input type="password"  asp-for="ConfirmPassword" />
 							<span asp-validation-for="ConfirmPassword" class="text-danger"></span>
 						</div>
+						<div class="text-danger" asp-validation-summary="ModelOnly">
+
+						</div>	
 
 
 						<label class="container">
