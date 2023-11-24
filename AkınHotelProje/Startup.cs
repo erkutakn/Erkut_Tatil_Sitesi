@@ -18,7 +18,7 @@ using System.IO;
 
 
 
-namespace TraversalCoreProje
+namespace AkınTurizmProje
 {
     public class Startup
     {

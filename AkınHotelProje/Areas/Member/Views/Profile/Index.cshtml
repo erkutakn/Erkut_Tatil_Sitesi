@@ -1,0 +1,24 @@
+﻿@model AkınTurizmProje.Areas.Member.Models.UserEditViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>Profil Düzenleme sayfası</h1>
+<form method="post">
+    @Html.Label("Adınız")
+    <input type="text" asp-for="name" class="form-control"/>
+    <br/>
+     @Html.Label("Soyadınız")
+    <input type="text" asp-for="surName" class="form-control"/>
+    <br /> @Html.Label("Mailiniz")
+    <input type="text" asp-for="mail" class="form-control" />
+    <br /> @Html.Label("Şifreniz")
+    <input type="text" asp-for="password" class="form-control" />
+    <br /> @Html.Label("Şifreyi Tekrar")
+    <input type="text" asp-for="confirmPassword" class="form-control" /> @Html.Label("Telefon numaranız")
+    <input type="text" asp-for="phoneNumber" class="form-control" />
+    <br />
+    <br />
+</form>
+
