@@ -5,13 +5,15 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace TraversalCoreProje.Controllers
+namespace AkınTurizmProje.Controllers
 {
-    [AllowAnonymous]
+    
+    
     public class LoginController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -63,6 +65,7 @@ namespace TraversalCoreProje.Controllers
             return View();
         }
         [HttpPost]
+       
         public async Task<IActionResult> SignIn(UserSignInViewModel p)
         {
             if (ModelState.IsValid)

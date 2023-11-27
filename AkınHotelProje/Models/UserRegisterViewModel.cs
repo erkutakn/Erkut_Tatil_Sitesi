@@ -15,13 +15,13 @@ namespace AkınTurizmProje.Models
 		public string Surname { get; set; }
 
 		[Required(ErrorMessage = "Lütfen Kullanıcı Adınızı Giriniz")]
-		public string Username { get; set; }
+		public string? Username { get; set; }
 
 		[Required(ErrorMessage = "Lütfen Mail Adresinizi Giriniz")]
 		public string Mail { get; set; }
 
 		[Required(ErrorMessage = "Lütfen Şifreyi Giriniz")]
-		public string Password { get; set; }
+		public string? Password { get; set; }
 
 		[Required(ErrorMessage = "Lütfen Şifreyi Tekrar Giriniz")]
 		[Compare("Password",ErrorMessage ="Şifreler Uyumlu Değil")]
