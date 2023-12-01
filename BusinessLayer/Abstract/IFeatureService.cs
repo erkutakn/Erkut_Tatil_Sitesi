@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IFeatureService:IGenericService<Feature>
+    public interface IFeatureService : IGenericService<Feature>
     {
+        public List<Destination> TFeaturedDestinations();
     }
 }

@@ -1,11 +1,11 @@
-﻿using System;
+﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
+using EntityLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BusinessLayer.Abstract;
-using DataAccessLayer.Abstract;
-using EntityLayer.Concrete;
 
 namespace BusinessLayer.Concrete
 {
@@ -25,26 +25,57 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Comment t)
         {
-            throw new NotImplementedException();
+            _commentDal.Delete(t);
         }
 
         public Comment TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _commentDal.GetByID(id);
         }
 
         public List<Comment> TGetList()
         {
-            throw new NotImplementedException();
+            return _commentDal.GetList();
         }
-        public List<Comment> TGetDestinationById(int id) 
+
+        public List<Comment> TGetDestinationById(int id)
         {
-            return _commentDal.GetListByFilter(x=>x.DestinationID==id);
+            return _commentDal.GetListByFilter(x => x.DestinationID.Equals(id));
         }
 
         public void TUpdate(Comment t)
         {
             throw new NotImplementedException();
+        }
+
+        public List<Comment> TGetListCommentWithDestination()
+        {
+            return _commentDal.GetListCommentWithDestination();
+        }
+
+        public List<Comment> TGetListCommentWithDestinationAndUser(int id)
+        {
+            return _commentDal.GetListCommentWithDestinationAndUser(id);
+        }
+
+        public List<Comment> TGetListCommentAndUser()
+        {
+            return _commentDal.GetListCommentAndUser();
+        }
+
+        public List<Comment> TGetListUserComments(int id)
+        {
+            return _commentDal.GetListUserComments(id);
+        }
+
+        public void TPasifTheComment(int id)
+        {
+            _commentDal.PasifTheComment(id);
+        }
+
+        public void TActiveTheComment(int id)
+        {
+            _commentDal.ActiveTheComment(id);
         }
     }
 }

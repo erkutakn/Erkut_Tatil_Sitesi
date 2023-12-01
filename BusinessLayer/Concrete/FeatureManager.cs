@@ -9,15 +9,20 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class FeatureManager : IFeatureService
+    public class FeatureManager:IFeatureService
     {
         IFeatureDal _featureDal;
 
-        public FeatureManager (IFeatureDal featureDal)
+        public FeatureManager(IFeatureDal featureDal)
         {
             _featureDal = featureDal;
-
         }
+
+        public List<Destination> TFeaturedDestinations()
+        {
+            return _featureDal.FeaturedDestinations();
+        }
+
         public void TAdd(Feature t)
         {
             throw new NotImplementedException();

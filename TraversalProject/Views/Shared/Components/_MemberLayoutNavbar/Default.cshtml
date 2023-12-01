@@ -1,0 +1,55 @@
+﻿<style>
+    #badge{
+        position: absolute;
+        right: 0.7rem;
+        padding: 5px;
+        bottom:2.4rem;
+        font-size: 0.875rem;
+        border-radius: 60%;
+    }
+</style>
+﻿
+<ul class="nav navbar-nav float-right">
+    <li class="dropdown dropdown-notification nav-item">
+        <a class="nav-link nav-link-label" href="/member/notification/index/">
+            <i class="ficon ft-bell"> </i> <span class="badge badge-danger" id="badge">@ViewBag.announcementCount</span>
+        </a>
+@*        <div class="dropdown-menu dropdown-menu-right">
+            <div class="arrow_box_right">
+                <a class="dropdown-item" href="#">
+                    <i class="ft-book"></i> Yeni Mesaj
+                </a><a class="dropdown-item" href="#">
+                    <i class="ft-bookmark"></i> İletişim Sayfası
+                </a>
+                <a class="dropdown-item" href="#"><i class="ft-check-square"></i> Ana Sayfa </a>
+            </div>
+        </div>*@
+    </li>
+    <li class="dropdown dropdown-user nav-item">
+        <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+            <span class="avatar avatar-online">
+                <img src="~/UserImages/@ViewBag.image" style="width:40px; height:37px;" alt="avatar"><i></i>
+            </span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+            <div class="arrow_box_right">
+                <a class="dropdown-item" href="#">
+                    <span class="avatar avatar-online">
+                        <img src="~/UserImages/@ViewBag.image" style="width:40px; height:37px;" alt="avatar">
+                        <span class="user-name text-bold-700 ml-1">@ViewBag.name @ViewBag.surname</span>
+                    </span>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/member/profile/index/">
+                    <i class="ft-user"></i> Profili Düzenle
+                </a>
+                <a class="dropdown-item" href="/member/notification/index/"><i class="ft-bell"></i> Bildirimler</a>
+                <a class="dropdown-item" href="/member/reservation/mycurrentreservation/"><i class="ft-check-square"></i> Aktif Rezervasyonlarım</a>
+                <a class="dropdown-item" href="/member/reservation/myoldreservation/"><i class="ft-download"></i> Geçmiş Rezervasyonlar</a>
+                <a class="dropdown-item" href="/member/reservation/myapprovalreservation/"><i class="ft-clock"></i> Onay  Bekleyenler</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/login/logout/"><i class="ft-power"></i> Çıkış Yap</a>
+            </div>
+        </div>
+    </li>
+</ul>

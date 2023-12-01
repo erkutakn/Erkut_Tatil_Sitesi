@@ -9,9 +9,11 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class AboutManager:IAboutService
+    public class AboutManager : IAboutService
     {
-        IAboutDal _aboutDal;
+        // Hangi entity geldiyse o entity'e ait repolara ulaşmak için Dependency Injection yapıyoruz.
+        IAboutDal _aboutDal; 
+
         public AboutManager(IAboutDal aboutDal)
         {
             _aboutDal = aboutDal;
@@ -29,12 +31,12 @@ namespace BusinessLayer.Concrete
 
         public About TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _aboutDal.GetByID(id);
         }
 
         public List<About> TGetList()
         {
-            return _aboutDal.GetList();
+           return _aboutDal.GetList();
         }
 
         public void TUpdate(About t)

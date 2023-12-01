@@ -1,7 +1,11 @@
-﻿using System;
-using System.Linq.Expressions;
-using DataAccessLayer.Abstract;
+﻿using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repository
 {
@@ -9,41 +13,41 @@ namespace DataAccessLayer.Repository
     {
         public void Delete(T t)
         {
-            using var c = new Context();
-            c.Remove(t);
-            c.SaveChanges();
+            using var context = new Context();
+            context.Remove(t);
+            context.SaveChanges();
         }
 
         public T GetByID(int id)
         {
-            using var c = new Context();
-            return c.Set<T>().Find(id);
+            using var context=new Context();
+            return context.Set<T>().Find(id);
         }
 
         public List<T> GetList()
         {
-            using var c = new Context();
-            return c.Set<T>().ToList();
+            using var context = new Context();
+            return context.Set<T>().ToList();
         }
 
         public List<T> GetListByFilter(Expression<Func<T, bool>> filter)
         {
-            using var c = new Context();
-            return c.Set<T>().Where(filter).ToList();
+            using var context = new Context();
+            return context.Set<T>().Where(filter).ToList();
         }
 
         public void Insert(T t)
         {
-            using var c = new Context();
-            c.Add(t);
-            c.SaveChanges();
+            using var context = new Context();
+            context.Add(t);
+            context.SaveChanges();
         }
 
         public void Update(T t)
         {
-            using var c = new Context();
-            c.Update(t);
+            using var context = new Context();
+            context.Update(t);
+            context.SaveChanges();
         }
     }
 }
-

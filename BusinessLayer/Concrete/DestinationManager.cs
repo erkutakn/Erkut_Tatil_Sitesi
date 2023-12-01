@@ -20,12 +20,27 @@ namespace BusinessLayer.Concrete
 
         public void TAdd(Destination t)
         {
-            throw new NotImplementedException();
+            _destinationDal.Insert(t);
         }
 
         public void TDelete(Destination t)
         {
-            throw new NotImplementedException();
+           _destinationDal.Delete(t);
+        }
+
+        public void TDestinationIsActive(Destination destination)
+        {
+            _destinationDal.DestinationIsActive(destination);
+        }
+
+        public void TDestinationIsPassive(Destination destination)
+        {
+            _destinationDal.DestinationIsPassive(destination);
+        }
+
+        public int TDestinationSearch(string cityName, DateTime date)
+        {
+           return _destinationDal.DestinationSearch(cityName, date);
         }
 
         public Destination TGetByID(int id)
@@ -33,14 +48,29 @@ namespace BusinessLayer.Concrete
             return _destinationDal.GetByID(id);
         }
 
+        public List<Destination> TGetDestinationByReservation()
+        {
+            return _destinationDal.GetDestinationByReservation();
+        }
+
+        public Destination TGetDestinationWithGuide(int id)
+        {
+            return _destinationDal.GetDestinationWithGuide(id);
+        }
+
+        public List<Destination> TGetLast4Destinations()
+        {
+            return _destinationDal.GetLast4Destinations();
+        }
+
         public List<Destination> TGetList()
         {
-           return _destinationDal.GetList();
+            return _destinationDal.GetList();
         }
 
         public void TUpdate(Destination t)
         {
-            throw new NotImplementedException();
+            _destinationDal.Update(t);
         }
     }
 }
